@@ -11,16 +11,50 @@ class Feedback extends React.Component {
     state = {
         good: 0,
         neutral: 0,
-        bad: 0
+        bad: 0,
     }
-countGood = () => { };
-countNeutral = () => { };
-countBad = () => {};
-countTotalFeedback = () => { };
-countPositiveFeedbackPercentage = () => { };
+    
+    countGood = () => {
+        this.setState(prevGood => {
+            return {
+                good: prevGood.good + 1,
+            }
+        })
+    };
+    countNeutral = () => { 
+        this.setState(prevNeutral => {
+            return {
+                neutral: prevNeutral.neutral + 1,
+            }
+        })
+    };
+    countBad = () => { 
+        this.setState(prevBad => {
+            return {
+                bad: prevBad.bad + 1,
+            }
+        })
+    };
+        
+  countTotalFeedback = () => {
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad
+    };
+    countPositiveFeedbackPercentage = () => {
+        
+    const { good, neutral, bad } = this.state;
+        return Math.round(good * 100 / (neutral + bad + good));
+    }
+
+
     render() {
-        return(
-        <section>
+      const { good, neutral, bad } = this.state;
+        const totalFeedback = this.countTotalFeedback();
+        const PositiveFeedbackPercentage = this.countPositiveFeedbackPercentage();
+        return (
+            
+        
+        <div>
             <div>
                 <h2>Please leave feedback</h2>
                 <button type='button' className={css.button} onClick={this.countGood}>
@@ -31,27 +65,29 @@ countPositiveFeedbackPercentage = () => { };
                 </button>
                 <button type='button' className={css.button} onClick={this.countBad}>
                     Bad
-                </button>
+                    </button>
+                   
             </div>
-                <div>
+                <div >
                     <h2>Statistics</h2>
                     <p>Good:
-                        <span className='good__value'>{this.state.good}</span>
+                        <span className='good__value'>{good}</span>
                     </p>
                     <p>Neutral:
-                        <span className='neutral__value'>{this.state.neutral}</span>
+                        <span className='neutral__value'>{neutral}</span>
                     </p>
                     <p>Bad:
-                        <span className='bad__value'>{this.state.bad}</span>
+                        <span className='bad__value'>{bad}</span>
                     </p>
                     <p>Total:
-                        <span className='total__value'>0</span>
+                        <span className='total__value'>{totalFeedback}</span>
                     </p>
                     <p>Positive feedback:
-                        <span className='positiveFeedback__value'>0</span>
+                        <span className='positiveFeedback__value'>{PositiveFeedbackPercentage || 0}</span>
                     </p>
+                </div>
             </div>
-        </section>
+       
         )
     }
 }
