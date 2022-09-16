@@ -1,9 +1,9 @@
 import React from 'react';
-// import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types'; 
 import css from './sectionRender.modules.css';
 
 
-class Feedback extends React.Component {
+export class Feedback extends Component {
     state = {
         good: 0,
         neutral: 0,
@@ -48,8 +48,7 @@ class Feedback extends React.Component {
         const totalFeedback = this.countTotalFeedback();
         const PositiveFeedbackPercentage = this.countPositiveFeedbackPercentage();
         return (
-            
-        
+                    
         <div>
             <div>
                 <h2>Please leave feedback</h2>
@@ -64,7 +63,7 @@ class Feedback extends React.Component {
                     </button>
                    
             </div>
-                <div >
+                <div>
                     <h2>Statistics</h2>
                     <p>Good:
                         <span className='good__value'>{good}</span>
