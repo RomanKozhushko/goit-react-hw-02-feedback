@@ -1,5 +1,5 @@
 import css from './sectionRender.modules.css';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 // countTotalFeedback();
 // countPositiveFeedbackPercentage();
@@ -35,11 +35,11 @@ export const sectionRender = (Good, Neutral, Total, Bad, PositiveFeedback,) => {
   );
 };
 
-sectionRender.propTypes = {
-    Good : PropTypes.number.isRequired,
-    Neutral :PropTypes.number.isRequired,
-    Bad: PropTypes.number.isRequired,
-    Total: PropTypes.number.isRequired,
-    PositiveFeedback: PropTypes.number.isRequired,
-}
+// sectionRender.propTypes = {
+//     Good : PropTypes.number.isRequired,
+//     Neutral :PropTypes.number.isRequired,
+//     Bad: PropTypes.number.isRequired,
+//     Total: PropTypes.number.isRequired,
+//     PositiveFeedback: PropTypes.number.isRequired,
+// }
 export default sectionRender
