@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Apca = styled.div`
 margin-left: auto;
 margin-right: auto;
-max-width: 360px;
+max-width: 380px;
 max-height: 600px;
 padding: 20px;
 background-color: rosybrown;
