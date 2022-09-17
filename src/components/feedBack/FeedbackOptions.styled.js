@@ -11,7 +11,7 @@ font-weight:700;
 font-size: 24px;
 border: 6px solid white;
 transition-duration: 200ms;
-cursor: progress;
+cursor: no-drop;
 
 
 
