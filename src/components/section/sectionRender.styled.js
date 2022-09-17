@@ -1,12 +1,7 @@
 import styled from 'styled-components';
 
 export const SectionBox = styled.section`
-color: blue;
-padding: 0 25px;
+padding: 0 15px;
 
 
-`;
-
-export const SectionTitle = styled.h1`
-color: black
 `;

@@ -7,13 +7,13 @@ max-width: 360px;
 max-height: 600px;
 padding: 20px;
 background-color: rosybrown;
-border: 4px solid purple;
+border: 14px solid purple;
 border-radius: 100px
 
 `;
 
 export const ApcaName = styled.h2`
-color: darkred;
+color: white;
 max-width: 500px;
 margin-left: auto;
 margin-right: auto;

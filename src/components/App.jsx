@@ -42,7 +42,7 @@ import{ Apca, ApcaName } from './App.styled'
             good={good}
             neutral={neutral}
             bad={bad}
-              />) : (<Notification message="There is no feedback" />
+              />) : (<Notification message="There is no feedback ;)" />
             )}
           </SectionBox>
         </Apca>
