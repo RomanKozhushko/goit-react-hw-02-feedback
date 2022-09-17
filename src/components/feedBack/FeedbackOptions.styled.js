@@ -13,14 +13,12 @@ border: 6px solid white;
 transition-duration: 200ms;
 
 &:hover,
-&:active,
-&:focus{
+&:active{
 border: 12px solid red;
 color: red;
 outline: none;
 background-color: white;
 transition-duration: 400ms;
-
 }
 `;
 
