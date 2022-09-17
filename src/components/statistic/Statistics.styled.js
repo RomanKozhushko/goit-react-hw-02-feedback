@@ -4,8 +4,6 @@ export const StatList = styled.ul`
 max-width:170px;
 margin: 20px auto;
 padding: 0;
-
-
 `;
 
 export const StatItem = styled.li`
@@ -33,5 +31,4 @@ margin-left: 5px;
 export const StatListName = styled.h2`
 text-align: center;
 color: white;
-
-`
+`;

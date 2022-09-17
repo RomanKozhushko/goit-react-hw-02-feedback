@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { StatList, StatItem, StatItemSpan, StatListName } from './Statistics.styled'
 
-
 const Statistics = ({
     good,
     neutral,
