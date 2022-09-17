@@ -11,12 +11,17 @@ font-weight:700;
 font-size: 24px;
 border: 6px solid white;
 transition-duration: 200ms;
+cursor: progress;
+
+
 
 &:last-child{
     background-color: lightpink;
+    cursor: no-drop;
 }
 &:first-child{
     background-color: lightgreen;
+    cursor: pointer;
 }
 
 &:hover,
