@@ -14,6 +14,8 @@ transition-duration: 200ms;
 
 &:hover,
 &:active{
+min-width: 110px;
+height: 110px;
 font-size: 18px;
 border: 12px solid red;
 color: red;
