@@ -13,13 +13,20 @@ margin-right: auto;
 list-style: none;
 max-width: 200px;
 display: flex;
-border-radius:5px;
+border-radius:10px;
 margin-bottom: 13px;
 background-color: powderblue;
-border: 4px solid darkred;
+border: 4px solid purple;
 font-size: 22px;
 justify-content: space-between;
 color: purple;
+
+&:last-child{
+    color: red;
+    border: 4px solid red;
+    font-weight: 700;
+
+}
 `;
 
 export const StatItemSpan = styled.span`

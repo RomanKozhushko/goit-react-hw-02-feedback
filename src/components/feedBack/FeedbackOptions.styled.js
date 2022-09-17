@@ -2,26 +2,31 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-min-width: 110px;
-height: 110px;
+min-width: 116px;
+min-height: 116px;
 border-radius: 50%;
 background-color: powderblue;
 color: purple;
 font-weight:700;
-font-size: 22px;
+font-size: 24px;
 border: 6px solid white;
 transition-duration: 200ms;
 
+&:last-child{
+    background-color: lightpink;
+}
+&:first-child{
+    background-color: lightgreen;
+}
+
 &:hover,
 &:active{
-min-width: 110px;
-height: 110px;
-font-size: 18px;
-border: 12px solid red;
-color: red;
+border: 10px solid white;
+font-size: 20px;
+color: white;
 outline: none;
-background-color: white;
 transition-duration: 400ms;
+
 }
 `;
 
