@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types'; 
 import css from './sectionRender.modules.css';
+import App from 'components/App';
 
 
-export class Feedback extends Component {
+export class SectionRender extends React.Component {
     state = {
         good: 0,
         neutral: 0,
@@ -48,7 +49,8 @@ export class Feedback extends Component {
         const totalFeedback = this.countTotalFeedback();
         const PositiveFeedbackPercentage = this.countPositiveFeedbackPercentage();
         return (
-                    
+            
+        
         <div>
             <div>
                 <h2>Please leave feedback</h2>
@@ -63,7 +65,7 @@ export class Feedback extends Component {
                     </button>
                    
             </div>
-                <div>
+                <div >
                     <h2>Statistics</h2>
                     <p>Good:
                         <span className='good__value'>{good}</span>
@@ -87,15 +89,11 @@ export class Feedback extends Component {
     }
 }
     
-
-
-
-
-// sectionRender.propTypes = {
-//     Good : PropTypes.number.isRequired,
-//     Neutral :PropTypes.number.isRequired,
-//     Bad: PropTypes.number.isRequired,
-//     Total: PropTypes.number.isRequired,
-//     PositiveFeedback: PropTypes.number.isRequired,
-// }
-export default Feedback;
+SectionRender.propTypes = {
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+    totalFeedback: PropTypes.number,
+    PositiveFeedbackPercentage: PropTypes.number,
+}
+export default SectionRender;
