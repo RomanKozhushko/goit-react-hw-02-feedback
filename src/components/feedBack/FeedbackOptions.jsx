@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import { Button } from './FeedbackOptions.styled'
+import { Button, FeedBackBox } from './FeedbackOptions.styled'
 
 
 const Feedback = ({onLeaveFeedback}) => {
     return (
-        <div>
+        <FeedBackBox>
             <Button type='button' onClick={() => onLeaveFeedback('good')}>
                 Good
             </Button>
@@ -15,7 +15,7 @@ const Feedback = ({onLeaveFeedback}) => {
             <Button type='button' onClick={() => onLeaveFeedback('bad')}>
                 Bad
             </Button>
-        </div>);
+        </FeedBackBox>);
 };
 
 Feedback.propTypes = {

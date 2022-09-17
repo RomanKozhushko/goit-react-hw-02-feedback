@@ -1,32 +1,30 @@
 import PropTypes from 'prop-types';
-import { StatList, StatItem, StatItemSpan } from './Statistics.styled'
-
-
+import { StatList, StatItem, StatItemSpan, StatListName } from './Statistics.styled'
 
 
 const Statistics = ({
     good,
     neutral,
-    bad,
-}) => {
+    bad,}) => {
     
-   
     const total = good + neutral + bad;
     const percentage = Math.round(good * 100 / total);
       
-    
     return (
         <StatList>
+            <StatListName>
+                Statistics
+            </StatListName>
 
-            <StatItem>Good:
+            <StatItem>Good: 
                 <StatItemSpan >{good}</StatItemSpan>
             </StatItem>
 
-            <StatItem>Neutral:
+            <StatItem>Neutral: 
                 <StatItemSpan >{neutral}</StatItemSpan>
             </StatItem>
 
-            <StatItem>Bad:
+            <StatItem>Bad: 
                 <StatItemSpan >{bad}</StatItemSpan>
             </StatItem>
 
@@ -34,8 +32,8 @@ const Statistics = ({
                 <StatItemSpan >{total} </StatItemSpan>
             </StatItem>
 
-            <StatItem>Positive feedback:
-                <StatItemSpan >{percentage || 0}</StatItemSpan>
+            <StatItem>Positive feedback: 
+                <StatItemSpan >{percentage}</StatItemSpan>
             </StatItem>
 
         </StatList>)
@@ -45,7 +43,5 @@ Statistics.propTypes = {
     good: PropTypes.number,
     neutral: PropTypes.number,
     bad: PropTypes.number,
-
 }
-
 export default Statistics

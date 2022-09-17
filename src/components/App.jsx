@@ -4,7 +4,7 @@ import Feedback from "components/feedBack/FeedbackOptions";
 import Statistics from "components/statistic/Statistics"
 import Notification from './notification/Notification';
 import { SectionBox } from './section/sectionRender.styled';
-
+import{ Apca, ApcaName } from './App.styled'
 
   export class App extends React.Component {
     state = {
@@ -28,24 +28,24 @@ import { SectionBox } from './section/sectionRender.styled';
       const options = Object.keys(this.state);
       return (
                    
-        <div>
+        <Apca>
           <SectionBox title="Please leave feedback">
-            <h2>Please leave feedback</h2>
+            <ApcaName>Please leave feedback</ApcaName>
             <Feedback
               options={options}
               onLeaveFeedback={this.onLeaveFeedback}
             />
           </SectionBox>
           <SectionBox title="Statistics">
-            {total > 0? (
-          < Statistics
+            {total > 0 ? (
+            <Statistics
             good={good}
             neutral={neutral}
             bad={bad}
               />) : (<Notification message="There is no feedback" />
             )}
           </SectionBox>
-        </div>
+        </Apca>
        
         )
     }
