@@ -31,7 +31,6 @@ font-size: 20px;
 color: white;
 outline: none;
 transition-duration: 400ms;
-
 }
 `;
 
@@ -40,3 +39,6 @@ display:flex;
 justify-content: space-between;
 padding: 0;
 `;
+
+ 
+   

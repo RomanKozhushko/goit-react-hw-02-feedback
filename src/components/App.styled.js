@@ -8,8 +8,7 @@ max-height: 640px;
 padding: 20px;
 background-color: rosybrown;
 border: 14px solid purple;
-border-radius: 100px
-
+border-radius: 100px;
 `;
 
 export const ApcaName = styled.h2`
